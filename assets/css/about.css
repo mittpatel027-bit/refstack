@@ -1,3 +1,152 @@
+/* styles.css */
+
+/* Font Faces */
+@font-face {
+  font-display: swap;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('assets/css/fonts/open-sans-v44-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url('assets/css/fonts/open-sans-v44-latin-800.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Belgrano';
+  font-style: normal;
+  font-weight: 400;
+  src: url('assets/css/fonts/belgrano-v19-latin-regular.woff2') format('woff2');
+}
+
+/* Base Typography */
+html { font-size: 16px; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.65;
+  background-color: #f9f9fb;
+  color: #333;
+}
+
+p {
+  font-size: 1em;
+  font-family: "Belgrano", serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h1, .text-size-h1 {
+  font-size: 3.05em;
+  margin-top: 0;
+  text-align: center;
+}
+
+h2, .text-size-h2 { font-size: 2.44em; }
+h3, .text-size-h3 { font-size: 1.95em; }
+h4, .text-size-h4 { font-size: 1.56em; }
+h5, .text-size-h5 { font-size: 1.25em; }
+
+.text-caption { font-size: 0.8em; }
+small, .text-small { font-size: 0.64em; }
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  background: #1b4332; /* dark green */
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo .title {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navigation a {
+  color: #d8f3dc; /* light green */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #95d5b2; /* softer green hover */
+}
+
+/* Front Section */
+.front {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.front h1 {
+  color: #1b4332;
+}
+
+/* Search Form */
+.form {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.search-input {
+  padding: 0.7rem 1rem;
+  border: 1px solid #95d5b2;
+  border-radius: 4px;
+  width: 250px;
+  font-size: 1rem;
+}
+
+.search-button {
+  background: #2d6a4f; /* medium green */
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-button:hover {
+  background: #40916c; /* lighter hover green */
+}
 
 /* Gallery */
 .front-images {
