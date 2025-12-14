@@ -4,7 +4,7 @@
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: url('./fonts/open-sans-v44-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('assets/css/fonts/open-sans-v44-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* open-sans-800 - latin */
@@ -13,7 +13,7 @@
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 800;
-  src: url('./fonts/open-sans-v44-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('assets/css/fonts/open-sans-v44-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* belgrano-regular - latin */
@@ -22,7 +22,7 @@
   font-family: 'Belgrano';
   font-style: normal;
   font-weight: 400;
-  src: url('./fonts/belgrano-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('assets/css/fonts/belgrano-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 html {font-size: 16px;}
