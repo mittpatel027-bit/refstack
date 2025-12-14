@@ -1,12 +1,10 @@
-/* styles.css */
-
 /* Font Faces */
 @font-face {
   font-display: swap;
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: url('assets/css/fonts/open-sans-v44-latin-regular.woff2') format('woff2');
+  src: url('/assets/css/fonts/open-sans-v44-latin-regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -14,7 +12,7 @@
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 800;
-  src: url('assets/css/fonts/open-sans-v44-latin-800.woff2') format('woff2');
+  src: url('/assets/css/fonts/open-sans-v44-latin-800.woff2') format('woff2');
 }
 
 @font-face {
@@ -22,7 +20,7 @@
   font-family: 'Belgrano';
   font-style: normal;
   font-weight: 400;
-  src: url('assets/css/fonts/belgrano-v19-latin-regular.woff2') format('woff2');
+  src: url('/assets/css/fonts/belgrano-v19-latin-regular.woff2') format('woff2');
 }
 
 /* Base Typography */
@@ -46,19 +44,12 @@ h1, h2, h3, h4, h5 {
   line-height: 1.15;
 }
 
-h1, .text-size-h1 {
-  font-size: 3.05em;
+h1 {
+  font-size: 2.5em;
   margin-top: 0;
   text-align: center;
+  color: #1b4332;
 }
-
-h2, .text-size-h2 { font-size: 2.44em; }
-h3, .text-size-h3 { font-size: 1.95em; }
-h4, .text-size-h4 { font-size: 1.56em; }
-h5, .text-size-h5 { font-size: 1.25em; }
-
-.text-caption { font-size: 0.8em; }
-small, .text-small { font-size: 0.64em; }
 
 /* Reset */
 * {
@@ -80,10 +71,15 @@ header {
   align-items: center;
 }
 
+.logo a {
+  text-decoration: none; /* remove underline */
+  border: none;
+}
+
 .logo .title {
   font-size: 1.5rem;
   color: #fff;
-  text-decoration: none;
+  margin: 0;
 }
 
 .navigation ul {
@@ -103,20 +99,15 @@ header {
   color: #95d5b2; /* softer green hover */
 }
 
-/* Front Section */
-.front {
-  text-align: center;
-  padding: 3rem 1rem;
-}
-
-.front h1 {
-  color: #1b4332;
-}
-
 /* Search Form */
 .form {
   text-align: center;
   padding: 2rem 1rem;
+}
+
+.form h1 {
+  color: #1b4332;
+  margin-bottom: 1rem;
 }
 
 .search-form {
@@ -134,6 +125,12 @@ header {
   font-size: 1rem;
 }
 
+.search-input:focus {
+  border-color: #2d6a4f;
+  outline: none;
+  box-shadow: 0 0 6px rgba(45,106,79,0.3);
+}
+
 .search-button {
   background: #2d6a4f; /* medium green */
   color: #fff;
@@ -141,51 +138,54 @@ header {
   padding: 0.7rem 1.2rem;
   border-radius: 4px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .search-button:hover {
-  background: #40916c; 
+  background: #40916c; /* lighter hover green */
+  transform: translateY(-2px);
 }
 
 /* Gallery */
-.front-images {
-  padding: 2rem;
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
-.front-gal {
+.gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
 
-.front-ex {
-  background: #e9f5ec; 
+.gallery div {
+  background: #e9f5ec; /* soft green background */
+  border: 2px solid #95d5b2;
   border-radius: 8px;
   text-align: center;
   padding: 1rem;
-  transition: transform 0.3s ease, border 0.3s ease;
-  border: 2px solid #95d5b2;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.front-ex:hover {
+.gallery div:hover {
   transform: translateY(-5px);
   border-color: #40916c;
 }
 
-.front-ex img {
+.gallery img {
   max-width: 100%;
   border-radius: 6px;
-  border: 5px solid #2d6a4f; 
+  border: 4px solid #2d6a4f;
 }
 
-.front-ex h6 {
+.gallery h6 {
   margin-top: 0.8rem;
   font-size: 1rem;
   color: #1b4332;
 }
 
-.front-ex p {
+.gallery p {
   font-size: 0.9rem;
   color: #40916c;
 }
@@ -196,10 +196,6 @@ footer {
   color: #d8f3dc;
   padding: 2rem;
   margin-top: 3rem;
-}
-
-.copyright {
-  text-align: center;
 }
 
 .footer-navigation ul {
@@ -218,6 +214,10 @@ footer {
 
 .footer-navigation a:hover {
   color: #95d5b2;
+}
+
+.copyright {
+  text-align: center;
 }
 
 .text-small {
