@@ -1,36 +1,38 @@
 /* styles.css */
+
+/* Font Faces */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: url('assets/css/fonts/open-sans-v44-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('assets/css/fonts/open-sans-v44-latin-regular.woff2') format('woff2');
 }
 
-/* open-sans-800 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 800;
-  src: url('assets/css/fonts/open-sans-v44-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('assets/css/fonts/open-sans-v44-latin-800.woff2') format('woff2');
 }
 
-/* belgrano-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'Belgrano';
   font-style: normal;
   font-weight: 400;
-  src: url('assets/css/fonts/belgrano-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('assets/css/fonts/belgrano-v19-latin-regular.woff2') format('woff2');
 }
 
-html {font-size: 16px;}
+/* Base Typography */
+html { font-size: 16px; }
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-weight: false;
   line-height: 1.65;
+  background-color: #f9f9fb;
+  color: #333;
 }
 
 p {
@@ -38,136 +40,188 @@ p {
   font-family: "Belgrano", serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1, h2, h3, h4, h5 {
   font-family: 'Open Sans', sans-serif;
-  font-weight: true;
+  font-weight: 700;
   line-height: 1.15;
 }
 
-h1,
-.text-size-h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  margin-top: 0;
+h1, .text-size-h1 {
   font-size: 3.05em;
+  margin-top: 0;
   text-align: center;
 }
 
-h2,
-.text-size-h2 { font-size: 2.44em; }
-
-h3,
-.text-size-h3 { font-size: 1.95em; }
-
-h4,
-.text-size-h4 { font-size: 1.56em; }
-
-h5,
-.text-size-h5 { font-size: 1.25em; }
+h2, .text-size-h2 { font-size: 2.44em; }
+h3, .text-size-h3 { font-size: 1.95em; }
+h4, .text-size-h4 { font-size: 1.56em; }
+h5, .text-size-h5 { font-size: 1.25em; }
 
 .text-caption { font-size: 0.8em; }
+small, .text-small { font-size: 0.64em; }
 
-small,
-.text-small {
-  font-size: 0.64em;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  background: #1b4332; /* dark green */
+  color: #fff;
+  padding: 1rem 2rem;
 }
 
 .header {
-  width: 100%;
-  padding: 18px 30px;
-  background: rgba(57, 131, 204, 0.75);
-  backdrop-filter: blur(8px);
-  border-radius: 10px;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto auto;
-  column-gap: 24px;
-  row-gap: 8px;
-  align-items: end;
-  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo { 
-  grid-column: 1;
-  grid-row: 1; 
- }
-
-.navigation { 
- grid-column: 2;
- grid-row: 1; 
- justify-self: end; 
+.logo .title {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
 }
 
-.title {
-  margin: 0;
-  font-weight: 900;
-  font-style: italic;
-  letter-spacing: 0.5px;
-  color: #ffffff;
-  display: inline-block;
-  line-height: 1;
-  padding-bottom: 4px;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.85);
-}
-
-/* Nav */
 .navigation ul {
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
-  gap: 16px;
-  align-items: flex-end;
+  gap: 1.5rem;
 }
 
 .navigation a {
+  color: #d8f3dc; /* light green */
   text-decoration: none;
-  color: #111;
-  font-weight: 600;
-  transition: color 0.2s ease;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .navigation a:hover {
-  color: #ffffff;
+  color: #95d5b2; /* softer green hover */
 }
 
-/* Main body div */
-.body {
+/* Front Section */
+.front {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.front h1 {
+  color: #1b4332;
+}
+
+/* Search Form */
+.form {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.search-form {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 80%;
-  margin-top: 20px;
-  margin-bottom: 25px;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
+.search-input {
+  padding: 0.7rem 1rem;
+  border: 1px solid #95d5b2;
+  border-radius: 4px;
+  width: 250px;
+  font-size: 1rem;
+}
+
+.search-button {
+  background: #2d6a4f; /* medium green */
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-button:hover {
+  background: #40916c; /* lighter hover green */
+}
+
+/* Gallery */
+.front-images {
+  padding: 2rem;
+}
+
+.front-gal {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.front-ex {
+  background: #e9f5ec; /* soft green background */
+  border-radius: 8px;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s ease, border 0.3s ease;
+  border: 2px solid #95d5b2;
+}
+
+.front-ex:hover {
+  transform: translateY(-5px);
+  border-color: #40916c;
+}
+
+.front-ex img {
+  max-width: 100%;
+  border-radius: 6px;
+  border: 5px solid #2d6a4f; /* green border around images */
+}
+
+.front-ex h6 {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  color: #1b4332;
+}
+
+.front-ex p {
+  font-size: 0.9rem;
+  color: #40916c;
+}
+
+/* Footer */
 footer {
-  width: 100%;
-  background-color: black;
-  color: white;
-  padding: 20px 0;
-  display: flex;
-  justify-content: center;
+  background: #1b4332;
+  color: #d8f3dc;
+  padding: 2rem;
+  margin-top: 3rem;
 }
 
-.footer {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.copyright {
   text-align: center;
 }
 
 .footer-navigation ul {
-  list-style-type: none;
+  list-style: none;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  margin: 10px 0;
-  padding: 0;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-navigation a {
+  color: #d8f3dc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-navigation a:hover {
+  color: #95d5b2;
+}
+
+.text-small {
+  font-size: 0.64em;
+  color: #b7e4c7;
+  text-align: center;
 }
