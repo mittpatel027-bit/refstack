@@ -1,3 +1,5 @@
+/* city.css */
+
 /* Font Faces */
 @font-face {
   font-display: swap;
@@ -46,7 +48,8 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 2.5em;
-  margin-top: 0;
+  margin: 2rem 0 1rem;
+  text-align: center;
   color: #1b4332;
 }
 
@@ -98,18 +101,20 @@ header {
   color: #95d5b2; /* softer green hover */
 }
 
-/* Gallery */
-.front-images {
-  padding: 2rem;
+/* Gallery Container */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
-.front-gal {
+.gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
 
-.front-ex {
+.gallery div {
   background: #e9f5ec; /* soft green background */
   border: 2px solid #95d5b2;
   border-radius: 8px;
@@ -118,24 +123,24 @@ header {
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.front-ex:hover {
+.gallery div:hover {
   transform: translateY(-5px);
   border-color: #40916c;
 }
 
-.front-ex img {
+.gallery img {
   max-width: 100%;
   border-radius: 6px;
   border: 4px solid #2d6a4f;
 }
 
-.front-ex h6 {
+.gallery h6 {
   margin-top: 0.8rem;
   font-size: 1rem;
   color: #1b4332;
 }
 
-.front-ex p {
+.gallery p {
   font-size: 0.9rem;
   color: #40916c;
 }
